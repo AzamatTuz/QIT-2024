@@ -3,4 +3,4 @@ const g = 10;
 
 let f = m * g ;
 
-console.log(f, "");
+console.log(f, "N");
