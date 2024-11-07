@@ -61,7 +61,7 @@ switch (isOrder2) {
     default:
         alert("Дұрыс вариант таңда");
         break;
-}
+} 
 
 var isOrder = prompt("Соус таңдаңыз" + "\n" + "А)BBQ 100" + "\n" + "Б)Cheese 100" + "\n" + "С)Ketchup 100");
 var souce = ""
