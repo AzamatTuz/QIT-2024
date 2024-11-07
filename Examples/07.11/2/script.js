@@ -40,13 +40,13 @@ var fri = ""
 
 switch (isOrder2) {
     case 'A', 'а':
-        fri = 'Кола'
+        fri = 'Кіш'
         break;
     case 'Б', 'б' :
-        fri = 'Спрайт'
+        fri = 'Орт'
         break;
     case 'С', 'с':
-        fri = 'Фанта'
+        fri = 'Үлк'
         break;
     default:
         alert("Дұрыс вариант таңда");
