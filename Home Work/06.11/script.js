@@ -35,4 +35,4 @@ if (walk == "1") {
     }
 } 
 
-alert(isName + " ойыны " + end);
+alert(isName + " ойыны" + end);
