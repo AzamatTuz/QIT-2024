@@ -1,9 +1,8 @@
-var n = Number(prompt('Сан енгізіңіз'));
-var total = 0;
+let num = +prompt("enter number");
+var res = 1;
 
-if (n > 0) {
-    var total = n * (n - 1);
-    alert(total)
-} else {
-    alert('Оң ссан енгізіңіз')
+for (let i = 1; i < num; i++ ) {
+    res *= i
 }
+
+alert(res)
