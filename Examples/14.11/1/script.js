@@ -1,10 +1,15 @@
 let result = 0;
 let number = 1;
+let students = +prompt('Студент санын енгіз');
 
-do {
+while (number <= students ) {
     var q = +prompt('Baga');
     result += q
     number++
-} while (number <= 12);
 
-alert(Math.round(result / 12));
+    if (q < 0 || q > 5) {
+        q = +prompt('Baga++');
+    } 
+}
+
+alert(Math.round(result / students));
