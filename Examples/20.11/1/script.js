@@ -8,8 +8,8 @@ function conv(a, b) {
         case "Tenge":
             return a / 494.4 + " Dollar";
         default:
-            return "Dyrys engiz"
+            return "Dyrys engiz" 
     }
 }
 
-alert(conv(money, kurs))
+alert(conv(money, kurs));
