@@ -5,7 +5,7 @@ function conv(a, b) {
     switch (b) {
         case "Dollar":
             return a * 494.4 + " Tenge";
-    case "Tenge":
+        case "Tenge":
             return a / 494.4 + " Dollar";
         default:
             return "Dyrys engiz"
