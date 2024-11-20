@@ -3,13 +3,9 @@ function eur() {
     let euro = 0;   
 
     while (true) {
-        let cash = +prompt('Enter your cash!');
-
-        if (cash == 0) {
-            break
-        }
-
-        let kurs = prompt('EUR // USD // KZT');
+        var money = prompt("Cash");
+        var cash = Number(money.match(/\d+/g));
+        var kurs = money.match(/[a-zA-Z]+/g);
 
         if (kurs == 'EUR') {
             results += cash;
@@ -19,11 +15,13 @@ function eur() {
         } else if (kurs == 'KZT') {
             euro = cash / 524;
             results += euro;
+        } else if (cash == 0) {
+            break;
         }
-
     }
 
     return 'Your euros: ' + Math.round(results);
 }
 
-alert(eur());
+alert(eur())
+
