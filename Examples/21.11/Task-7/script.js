@@ -17,25 +17,25 @@ function all() {
 
         if (order == '1' && all >= 20) {
             all -= 20;
-            alert('Sizde ' + all + ' USD kaldy');
+            alert('Sizde ' + Math.round(all) + ' USD kaldy');
         } else if (order == '1' && all < 20) {
             alert('Sizde karajat jetkiliksiz');
             break;
         } else if (order == '2' && all >= 10) {
             all -= 10;
-            alert('Sizde ' + all + ' USD kaldy');
+            alert('Sizde ' + Math.round(all) + ' USD kaldy');
         } else if (order == '2' && all < 10) {
             alert('Sizde karajat jetkiliksiz');
             break;
         } else if (order == '3' && all >= 5) {
             all -= 5;
-            alert('Sizde ' + all + ' USD kaldy');
+            alert('Sizde ' + Math.round(all) + ' USD kaldy');
         } else if (order == '3' && all < 5) {
             alert('Sizde karajat jetkiliksiz');
             break;
         } else if (order == '4' && all >= 1) {
             all -= 1;
-            alert('Sizde ' + all + ' USD kaldy');
+            alert('Sizde ' + Math.round(all) + ' USD kaldy');
         } else if (order == '4' && all < 1) {
             alert('Sizde karajat jetkiliksiz');
             break;
