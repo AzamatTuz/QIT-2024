@@ -15,3 +15,8 @@ const fillArray = (name) => {
 
     return array;
 };
+
+let numbers = fillArray('San').filter((element) => element >= 50);
+let fiftyMulti = numbers.map((element) => element * 2);
+
+console.log(fiftyMulti);
