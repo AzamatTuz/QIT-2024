@@ -48,3 +48,7 @@ array.forEach(function(element) {
 // console.log(`Jup sandar ${evens}`);
 // console.log(`Tak sandar ${odd}`);
 
+
+
+
+
