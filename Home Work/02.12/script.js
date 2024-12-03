@@ -4,15 +4,17 @@ const book = {
     pages: 320,
     isRead: true,
     readbook: function () {
-        console.log('Сіз ' + this.title + ' кітабын ' + this.author + ' жазған оқып жатырсыз.');
+        return 'Сіз ' + this.title + ' кітабын ' + this.author + ' жазған оқып жатырсыз.';
     },
     toggleReadStatus: function () {
-        console.log("Оқу күйі жаңартылды: " + this.isRead);
-        
+        this.isRead = !this.isRead;
+        return this.isRead;
+
     }
 }
 
-book.readbook()
-book.toggleReadStatus()
+console.log(book.readbook());
+console.log(book.toggleReadStatus ? 'Siz myna kitapty okygansyz' : 'Siz myna kitapty okymagansyz');
+
 
 
