@@ -1,0 +1,27 @@
+body {
+    width: 98vw;
+    height: 98vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 1.9em;
+    font-family: sans-serif;
+}
+
+h1 {
+    color: red;
+}
+.text {
+    font-size: 1.2em;
+    text-align: center;
+}
+
+i {
+    color: green;
+    text-align: center;
+}
+
+button {
+    font-size: 1.1em;
+}
