@@ -1,0 +1,27 @@
+body {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+#shenber {
+    height: 200px;
+    width: 200px;
+    border-radius: 100%;
+    background: #ffaa00;
+    transition: 0.5s all;
+}
+
+button {
+    padding: 20px 50px;
+    color: white;
+    border-radius: 10px;
+    font-size: 25px;
+    background: #000;
+    cursor: pointer;
+}
+

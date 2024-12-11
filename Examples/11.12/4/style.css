@@ -1,0 +1,38 @@
+body {
+    height: 98vh;
+    width: 98vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    font-family: sans-serif;
+}
+
+#square {
+    height: 400px;
+    width: 400px;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #006319;
+    border-radius: 10px;
+    transition: 0.3s ease-in-out;
+    font-size: 2em;
+}
+
+.buttons {
+    display: flex;
+    gap: 90px;
+}
+
+button {
+    color: white;
+    padding: 15px;
+    font-size: 28px;
+    background: #006e07;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
