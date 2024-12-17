@@ -1,0 +1,30 @@
+body {
+    background: #b4ffba;
+    font-family: sans-serif;
+    height: 300vh;
+}
+
+#logo {
+    height: 80px;
+    width: 80px;
+    border-radius: 100%;
+}
+
+header {
+    background: #6e6e6e83;
+    padding: 15px;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    backdrop-filter: blur(1px);
+    border-radius: 20px;
+    position: sticky;
+    top: 10px;
+}
+
+a {
+    text-decoration: none;
+    padding: 15px;
+    color: white;
+}
