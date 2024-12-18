@@ -5,6 +5,8 @@ window.addEventListener('scroll', () => {
         header.style.margin = '0';
         header.style.padding = '0';
         header.style.background = 'black'
+        header.style.top = '0'
+        header.style.borderRadius = '0'
     } else {
         header.style.margin = '10px';
         header.style.padding = '15px';
