@@ -15,10 +15,11 @@ cont.style.fontFamily = 'sans-serif'
 books.forEach((book) => {
     const card = document.createElement('div');
     const title = document.createElement('h1');
+    const close = document.createElement('button');
+
+    close.textContent = 'Delete'
 
     card.style.width = '600px'
-    card.style.display = 'flex'
-    card.style.flexDirection = 'column-reverse'
     card.style.border = '2px solid black'
     card.style.borderRadius = '20px'
     card.style.padding = '20px'
@@ -29,6 +30,11 @@ books.forEach((book) => {
 
     card.appendChild(title);
     cont.appendChild(card);
+    card.appendChild(close);
+
+    close.addEventListener('click', () => {
+        card.remove()
+    })
     
 })
 

@@ -4,20 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+    </style>
 </head>
 <body>
-    <h1>Manipulation         element</h1>
+    <h1>My first ToDo Form</h1>
 
-    <div class="row">
-
+    <div>
+        <input id="taskInput" type="text" placeholder="Task">
+        <button id="addButton">+</button><br> <br>
+        <input id="searchInput" type="text" placeholder="Search">
+        <button id="searchButton">Search</button> <br> <br>
+        <input id="dataInput" type="text" placeholder="Date">
+        <button id="dateButton">+</button>
     </div>
 
-    <div id="container">
-        <p id="first">First p</p>
-        <p id="second">Second p</p>
-        <p id="third">Third p</p>
-    </div>
-    <button id="removeButton">Remove</button>
+    <ul id="todoList">
+
+    </ul>
+
     <script src="script.js"></script>
 </body>
 </html>

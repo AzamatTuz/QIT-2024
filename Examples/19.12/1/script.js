@@ -1,43 +1,61 @@
-const row = document.querySelector('.row');
+const todoList = document.getElementById('todoList');
+const addButton = document.getElementById('addButton');
+const searchButton = document.getElementById('searchButton');
 
+addButton.addEventListener('click', () => {
+    const taskInput = document.getElementById('taskInput');
 
-const data = ['color', 'size', 'weight', 'type'];
+    if (taskInput.value !== "") {
+        const task = document.createElement('li');
+        const span = document.createElement('span');
+        const deleteButton = document.createElement('button');
 
-data.forEach((item) => {
-    const pill = document.createElement('span');
-    pill.textContent = item;
-    pill.style.background = 'gray';
-    pill.style.padding = '10px';
-    pill.style.color = 'white';
-    pill.style.borderRadius = '20px';
-    pill.style.margin = '10px'
-    pill.style.transition = '0.5s all'
+        span.textContent = taskInput.value;
+        taskInput.value = "";
+        deleteButton.textContent = 'Delete'
 
-    row.appendChild(pill);
+        task.style.display = 'flex'
+        task.style.justifyContent = 'space-between'
+        task.style.background = '#cecece';
+        task.style.padding = '20px';
+        task.style.width = '300px'
+        task.style.listStyle = 'none'
+        task.style.border = '2px solid black'
+        task.style.margin = '10px'
 
-    const close = document.createElement('button');
-    close.textContent = 'x';
+        task.appendChild(span);
+        task.appendChild(deleteButton)
+        todoList.appendChild(task)
 
-    row.appendChild(close);
+        deleteButton.addEventListener('click', () => {
+            task.remove()
+        })
 
-    close.addEventListener('click', () => {
-        pill.remove()
-        close.remove()
+        task.addEventListener('dblclick', () => {
+            const changeInput = document.createElement('input');
+            changeInput.placeholder = 'Change';
+
+            task.replaceChild(changeInput, span);
+
+            changeInput.addEventListener('blur', () => {
+                task.textContent = changeInput.value
+                task.appendChild(deleteButton)
+            })
+        })
+    }
+})
+
+searchButton.addEventListener('click', () => {
+    const searchInput = document.getElementById('searchInput');
+
+    const tasks = document.querySelectorAll('li');
+
+    tasks.forEach((task) => {
+        const text = task.querySelector('span');
+        if (!text.textContent.toLowerCase().includes(searchInput.value.toLowerCase())) {
+            task.style.display = 'none'
+        } else {
+            task.style.display = 'flex'
+        }
     })
-
-    pill.addEventListener('dblclick', () => {
-        const fix = document.createElement('input');
-
-        row.replaceChild(fix, pill)
-    })
-});
-
-const parent = document.getElementById('container');
-const child = document.getElementById('first');
-const button = document.getElementById('removeButton');
-
-button.addEventListener('click', () => {
-    parent.removeChild(child);
-});
-
-
+})
