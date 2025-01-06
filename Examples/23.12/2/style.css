@@ -1,0 +1,34 @@
+body {
+    height: 98vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: sans-serif;
+}
+
+.theme {
+    padding: 10px 30px; 
+    border: 1px #cecece solid;
+    background: #424242;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.darkTheme {
+    background: #2c2c2c;
+}
+
+.text {
+    font-size: 25px;
+}
+
+.darkText {
+    color: white;
+}
+
+.darkBtn {
+    background: #ffffff;
+    color: black;
+}

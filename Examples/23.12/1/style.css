@@ -1,0 +1,27 @@
+.searchInput {
+    display: none;
+    height: 50px;
+    width: 200px;
+    border: 5px solid red;
+    border-radius: 10px;
+}
+
+.shadow {
+    box-shadow: 10px 10px 10px black;
+}
+
+.apear {
+    display: inline-block;
+}
+
+.text {
+    display: none;
+}
+
+.showText {
+    display: flex;
+}
+
+.btn {
+    display: block;
+}
