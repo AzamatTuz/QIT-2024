@@ -16,15 +16,21 @@ const eight = document.getElementById('eight');
 const nine = document.getElementById('nine');
 const zero = document.getElementById('zero');
 const dote = document.getElementById('dote');
-const precent = document.getElementById('precent')
+const precent = document.getElementById('precent');
+const plusOrMinus = document.getElementById('plusOrMinus');
 
-calcInput.value = "";
 let firstNumber;
 let calc;
 let variable;
 
+plusOrMinus.addEventListener('click', () => {
+    calcInput.value = Number(calcInput.value) * (-1);
+})
+
 precent.addEventListener('click', () => {
-    calcInput.value = Number(calcInput.value) / 100 
+    firstNumber = calcInput.value
+
+    calcInput.value = Number(calcInput.value) / 100
 })
 
 plus.addEventListener('click', () => {
