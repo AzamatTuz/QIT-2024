@@ -5,8 +5,8 @@ const cont = document.getElementById('cont')
 weatherBtn.addEventListener('click', fetchData)
 
 function fetchData() {
-    const city = document.getElementById('weatherInput');
-    const api = `https://api.openweathermap.org/data/2.5/weather?q=${city.value}&appid=${apiKey}&units=metric;`
+    const city = document.getElementById('weatherInput').value.trim()
+    const api = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric;`
     city.value = ""
     fetch(api)
         .then(response => response.json())
