@@ -4,20 +4,6 @@ const cont = document.getElementById('cont')
 
 weatherBtn.addEventListener('click', fetchData)
 
-// function fetchData() {
-    
-//     const api = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric;`
-//     city.value = ""
-//     fetch(api)
-//         .then(response => response.json())
-//         .then(data => {
-            
-            
-//         })
-
-//         .catch(error => console.error('Kate oryn aldy', error));
-// }
-
 async function fetchData() {
 
     try {
