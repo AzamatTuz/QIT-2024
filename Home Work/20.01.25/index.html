@@ -4,23 +4,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Quiz</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <h1 id="welcomeQuiz">Welcome to QUIZ</h1>
+    <button id="startQuiz">Start quiz</button>
 
-    <div class="quizCont">
-        <h1 id="questionText">Question</h1>
-        <p id="timer">Time: 0</p>
-        <div class="buttons">
-            <button class="answerBtn">Answer 1</button>
-            <button class="answerBtn">Answer 2</button>
-            <button class="answerBtn">Answer 3</button>
-            <button class="answerBtn">Answer 4</button>
+    <section id="quiz">
+        <p id="questionText">Question</p>
+        <div class="timerDiv">
+            <div id="timerAnimation"></div>
         </div>
-    </div>
+        <div class="quizCont">
+            <div class="buttons">
+                <button class="answerBtn">Answer 1</button>
+                <button class="answerBtn">Answer 2</button>
+                <button class="answerBtn">Answer 3</button>
+                <button class="answerBtn">Answer 4</button>
+            </div>
+        </div>
+        <button id="skipButton">Skip</button>
+    </section>
 
+    <section class="sectionEnd" id="sectionEnd">
+        <h1>The end</h1>
+        <h1 id="scoreText">Your score:</h1>
+        <button id="restartBtn">Restart</button>
+    </section>
+
+    <section id="nextQuestion">
+        <h1>NEXT QUESTION</h1>
+        <div id="nextAnimated"></div>
+    </section>
 
     <script src="script.js"></script>
 </body>
