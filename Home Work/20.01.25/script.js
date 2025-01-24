@@ -11,7 +11,6 @@ const startQuiz = document.getElementById('startQuiz');
 const skipButton = document.getElementById('skipButton');
 
 let time = 10;
-let quest = 1;
 let i = 0;
 let num = 0;
 let isClicked = true;
@@ -21,7 +20,6 @@ restartBtn.addEventListener('click', () => {
     welcomeQuiz.style.display = 'flex';
     startQuiz.style.display = 'flex';
     time = 10;
-    quest = 1;
     i = 0;
     num = 0;
     isClicked = true;
@@ -40,19 +38,12 @@ startQuiz.addEventListener('click', () => {
             skipQuestion()
         }
 
-        if (quest == 5) {
-            clearInterval(interval);
-            setTimeout(() => {
-                quiz.style.display = 'none';
-                sectionEnd.style.display = 'flex';
-                sectionEnd.style.flexDirection = 'column';
-                scoreText.textContent = `Your score: ${num}`
-            }, 10000)
-        }
+        
     }, 1000)
     
 
     async function fetchData() {
+        i++;
         const apiUrl = 'https://67873274c4a42c916105d2fe.mockapi.io/api/onlineduken/questions';
         try {
             const response = await fetch(apiUrl);
@@ -63,28 +54,23 @@ startQuiz.addEventListener('click', () => {
             function checkAnswer(e) {
 
                 if (isClicked) {
-
+                    
                     skipButton.style.display = 'flex';
 
                     if (e.textContent == buttons[data[i].answer].textContent) {
                         buttons[data[i].answer].style.background = 'green';
                         num++;
                         isClicked = false;
-
-                        setTimeout(() => {
-                            // skipQuestion()
-                        }, 1000);
                     } else {
                         buttons[data[i].answer].style.background = 'green';
                         e.style.background = 'red';
                         isClicked = false;
-                        setTimeout(() => {
-                            // skipQuestion()
-                        }, 1000);
                     }
+                } else {
+                    
                 }
-            }
-
+    
+            } 
             for (let b = 0; b < data[i].options.length; b++) {
                 buttons[b].textContent = data[i].options[b];
             }
@@ -106,12 +92,11 @@ startQuiz.addEventListener('click', () => {
     fetchData()
 
     function skipQuestion() {
-        i++;
-        quest++;
         fetchData()
         quiz.style.display = 'none';
         nextQuestion.style.display = 'flex';
         isClicked = true;
+        skipButton.style.display = 'none';
         setTimeout(() => {
             nextQuestion.style.display = 'none';
             time = 10;
@@ -121,9 +106,23 @@ startQuiz.addEventListener('click', () => {
         buttons.forEach(button => {
             button.style.background = '#006dc0';
         })
+
+        if (i == 5) {
+            clearInterval(interval);
+            setTimeout(() => {
+                nextQuestion.style.display = 'none';
+                quiz.style.display = 'none';
+                sectionEnd.style.display = 'flex';
+                sectionEnd.style.flexDirection = 'column';
+                scoreText.textContent = `Your score: ${num}`
+            }, 10000)
+        }
+
     }
 
-    skipButton.addEventListener('click', skipQuestion)
+    skipButton.addEventListener('click', () => {
+        skipQuestion();
+    })
 });
 
 
