@@ -11,16 +11,20 @@ async function fetchData() {
         const response = await fetch(apiKey);
         const data = await response.json()
         console.log(data.rates);
-        
+
         change.addEventListener('click', () => {
-            data.rates.forEach(element => {
-                console.log(element.toCurrency.value);
-            });
-            
+
+            if (toCurrency.value != '' && amount.value != '') {
+                text.textContent = Number(amount.value) * data.rates[toCurrency.value] + ' ' + toCurrency.value;
+
+                toCurrency.value = '';
+                amount.value = '';
+            }
+
         })
     } catch (error) {
         console.error('Kate: ' + error);
-        
+
     }
 }
 

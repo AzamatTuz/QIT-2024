@@ -4,10 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            gap: 15px;
+            font-family: sans-serif;
+        }
+
+        input {
+            border: none;
+            outline: none;
+            font-size: 18px;
+            background: #787878;
+            padding: 10px;
+            border-radius: 5px;
+            color: white;
+        }
+
+        ::placeholder {
+            color: white;
+        }
+
+        button {
+            cursor: pointer;
+            border: none;
+            border-radius: 10px;
+            padding: 15px;
+            background: #787878;
+            color: white;
+            font-size: 18px;
+        }
+    </style>
 </head>
 <body>
     
-    <input id="amount" type="text">
+    <input placeholder="amount" id="amount" type="text">
     <input placeholder="currency" id="toCurrency" type="text">
     
     <button id="change">Change</button>
