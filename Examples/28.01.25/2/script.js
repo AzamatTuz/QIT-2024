@@ -15,12 +15,16 @@ getButton.addEventListener('click', () => {
     const name = localStorage.getItem('name');
     const age = localStorage.getItem('age');
 
-    alert(`Name: ${name} age: ${age}`)
+    if (name && age) {
+        alert(`Name: ${name} age: ${age}`);
+    } else {
+        alert('Data is not find')
+    }
     
-})
+});
 
 clearButton.addEventListener('click', () => {
     localStorage.clear();
 
-    alert('Clear')
-})
+    alert('Clear');
+});
