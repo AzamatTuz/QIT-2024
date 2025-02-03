@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            gap: 10px;
+            font-family: sans-serif;
+        }
+
+        button {
+            padding: 15px 25px;
+            border: none;
+            color: white;
+            background: #3f3f3f;
+            font-size: 18px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        input {
+            border: none;
+            outline: none;
+            width: 100px;
+            height: 30px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <input id="colorInput" type="color">
+    <div>
+        <button id="saveColor">Save</button>
+        <button id="clearColor">Clear</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
